@@ -1,4 +1,4 @@
-/* RUNMATE customizable background photo settings v3 */
+/* RUNMATE customizable background photo settings v4 */
 (function(){
  const style=document.createElement('style');style.textContent=`
  html,body{min-height:100%;background:#0d1115}body{position:relative;margin:0}
@@ -6,6 +6,7 @@
  #rmBgShade{display:none;position:fixed;inset:0;z-index:1;background:rgba(5,13,22,var(--rm-dim,.56));backdrop-filter:blur(var(--rm-blur,3px));-webkit-backdrop-filter:blur(var(--rm-blur,3px));pointer-events:none}
  body.rmCustomBg #rmBgLayer,body.rmCustomBg #rmBgShade{display:block}body.rmCustomBg>.app{position:relative;z-index:2;background:transparent!important}body.rmCustomBg>.tabs{z-index:20}body.rmCustomBg>.celebrate{z-index:99}
  body.rmCustomBg .card{background:rgba(18,30,43,.67)!important;border-color:rgba(255,255,255,.18)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 28px rgba(0,0,0,.2)}body.rmCustomBg .metric,body.rmCustomBg .ghost{background:rgba(12,22,32,.64)!important}
+ #home{text-align:center;padding-top:clamp(38px,10vh,105px)}#home .card{max-width:500px;margin-left:auto;margin-right:auto}#home .grid{text-align:center}#home .metric{text-align:center}#home .primary{max-width:500px;margin-left:auto;margin-right:auto;display:block}.app>header{text-align:center}.app>header .logo{letter-spacing:.5px}
  .rmBgBox{margin-top:18px;padding-top:16px;border-top:1px solid #33404a}.rmBgPreview{height:210px;border-radius:18px;background:#10161b center/cover no-repeat;border:1px solid #33404a;display:flex;align-items:center;justify-content:center;color:#9aa5af;margin:10px 0}.rmBgBtns{display:flex;gap:8px}.rmBgBtns button{flex:1}.rmRange{display:grid;grid-template-columns:90px 1fr 48px;align-items:center;gap:8px;margin:12px 0}.rmRange input{padding:0}.rmBgNote{font-size:11px;color:#aeb8c1;line-height:1.5}.rmApplied{display:inline-block;margin:8px 0;padding:5px 9px;border-radius:10px;background:#2d7dff;color:#fff;font-size:11px;font-weight:800}
  `;document.head.appendChild(style);
  function layers(){if(!document.getElementById('rmBgLayer')){const bg=document.createElement('div');bg.id='rmBgLayer';const sh=document.createElement('div');sh.id='rmBgShade';document.body.insertBefore(bg,document.body.firstChild);document.body.insertBefore(sh,bg.nextSibling)}}
